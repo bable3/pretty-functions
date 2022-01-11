@@ -1,0 +1,47 @@
+.form {
+  background: white;
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  transition: box-shadow 0.2s ease-in-out, background 0.1s ease-in-out;
+  box-shadow: rgb(0 0 0 / 21%) 1px 5px 11px;
+  &.cdk-drag-dragging {
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.39) 1px 10px 11px;
+    background: #cccccc;
+  }
+}
+.form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.form__close {
+  margin-left: auto;
+}
+.form__header {
+  padding: 1em;
+  color: #673ab7;
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  p {
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+}
+.form__drag {
+  background: #673ab7;
+  padding: 1em;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}

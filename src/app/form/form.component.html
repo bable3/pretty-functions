@@ -1,0 +1,41 @@
+<div class="form" cdkDrag>
+  <div class="form__drag" cdkDragHandle>
+    <mat-icon>drag_indicator</mat-icon>
+  </div>
+  <mat-accordion [formGroup]="modalForm">
+    <mat-expansion-panel (opened)="show = true" (closed)="show = false">
+      <mat-expansion-panel-header class="form__header">
+        <h2>Contenu</h2>
+      </mat-expansion-panel-header>
+      <div class="form__content">
+        <mat-form-field appearance="fill">
+          <mat-label for="background">background</mat-label>
+          <input formControlName="background" matInput />
+          <mat-hint>background valide en css</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Nom de fichier</mat-label>
+          <input formControlName="filename" matInput />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Votre code</mat-label>
+          <textarea
+            formControlName="code"
+            matInput
+            rows="8"
+            placeholder="Votre code"
+          ></textarea>
+        </mat-form-field>
+        <mat-slider
+          thumbLabel
+          formControlName="minWidth"
+          tickInterval="1000"
+          step="1"
+          min="0"
+          max="100"
+          aria-label="units"
+        ></mat-slider>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

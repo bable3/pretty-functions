@@ -1,0 +1,24 @@
+<div #screen class="screen" [style.background]="datas.background">
+  <div class="window" [style.width]="windowWidth">
+    <div class="topbar">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="title">{{ datas.filename }}</div>
+    </div>
+    <pre>
+    <code [highlight]="datas.code" >
+  </code>
+  </pre>
+  </div>
+</div>
+<button class="button__fixed" mat-fab color="primary" (click)="downloadImage()">
+  <mat-icon>download</mat-icon>
+</button>
+
+<div id="download">
+  <img #canvas />
+  <a #downloadLink></a>
+</div>
